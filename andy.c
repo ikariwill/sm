@@ -21,22 +21,17 @@ void loop(){
   while(Serial.available()>0){
     leitura = Serial.read();
 
-    if (leitura == 'b' || leitura == 'B')
-    {
+    if (leitura == 'b' || leitura == 'B') {
       digitalWrite(ledBlue, LOW);
       digitalWrite(ledOrange, HIGH);
       digitalWrite(ledWhite, HIGH);
     }
-
-    else if (leitura == 'o' || leitura == 'O')
-    {
+    else if (leitura == 'o' || leitura == 'O') {
       digitalWrite(ledOrange, LOW);
       digitalWrite(ledWhite, HIGH);
       digitalWrite(ledBlue, HIGH);
     }
-
-    else if (leitura == 'w' || leitura == 'W')
-    {
+    else if (leitura == 'w' || leitura == 'W') {
       digitalWrite(ledWhite, LOW);
       digitalWrite(ledBlue, HIGH);
       digitalWrite(ledOrange, HIGH);
